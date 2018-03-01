@@ -80,7 +80,7 @@ MemoryGame = function(gs) {
 	 * @param	{int}	cardId	Lugar que ocupa la carta en el array de cartas
 	 */
 	this.onClick = function(cardId) {
-		if(cardId != undefined && !this.arrayCartas[cardId].encontrada()) {
+		if(cardId != undefined && !this.arrayCartas[cardId].encontrada() && !this.arrayCartas[cardId].up()) {
 			this.arrayCartas[cardId].flip();
 
 			if (this.cartaVolteada != -1) {
@@ -179,5 +179,9 @@ MemoryGameCard = function(id) {
 
 	this.encontrada = function(){
 		return this.estadoCarta == STATUS.FOUND;
+	}
+
+	this.up = function(){
+		return this.estadoCarta == STATUS.UP;
 	}
 };
