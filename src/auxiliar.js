@@ -15,8 +15,7 @@ var CustomGraphicServer = function() {
 	this.tileWidth = 80;
 	this.tileHeight = 100;
 	
-	// Espacio vertical para colocar el mensaje de texto
-	this.vOffset = 50;
+
 
 	// Información sobre los tiles
 	this.maps = { };
